@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Amarah - Personal Shopping & Errand Assistant</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#f9232c", secondary: "#4ECDC4", accent: "#FFD93D", "background-light": "#f8f5f6", "background-dark": "#230f10", "content-light": "#FFFFFF", "content-dark": "#2C2C2C", "text-light": "#1A1A1A", "text-dark": "#F7FFF7", "subtext-light": "#4A4A4A", "subtext-dark": "#A3A3A3", "border-light": "#E0E0E0", "border-dark": "#3D3D3D"}, fontFamily: {display: "Be Vietnam Pro"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}, boxShadow: {vibrant: "0 10px 30px -10px rgba(255, 107, 107, 0.4), 0 4px 6px -2px rgba(78, 205, 196, 0.2)"}}}};</script>
+<style>
+    .form-input::placeholder {
+      color: #A3A3A3;
+    }
+    .dark .form-input::placeholder {
+      color: #A3A3A3;
+    }
+    .hero-bg {
+      background-image: linear-gradient(to right, rgba(255, 107, 107, 0.8), rgba(78, 205, 196, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZTpLzsp0WO9pFInRZcQd_796ZLiXGGbXnIJ9IERIoOmKNQ9TScM0mMvRzE45HxTA2Hu6Vls1tSNgMD2lBssQ3GBdqkwZMy0LjlWbzObZLsOIWYk3rqvrudNA1-pwcbX-_YLQuWViMUr_LEbytX1VI5hqy-ir6Y9b4oOp8hEdZO24vr-Wg_cCWFKBYMzW7M3CI-CyKHW8sg1N528AK3Cz4Z_FYqpZHE1lw2lNqVg2xry380nMUklXZ4Yb3_81ZjUrjtH4zVcZ9RU8');
+    }
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background-color: var(--tw-color-primary);
+      border-radius: 2px;
+    }
+    .animated-gradient {
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-20 bg-content-light dark:bg-content-dark/90 backdrop-blur-lg border-b border-border-light dark:border-border-dark shadow-md">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="w-120 h-10 text-primary flex items-center justify-center bg-primary/10 rounded-full overflow-hidden">
+<img src="./images/logo.png" alt="business logo" width="150rem" srcset="">
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+<a class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary/90 transition-all transform hover:scale-105 shadow-vibrant" href="#quote">Book a Quotation</a>
+</nav>
+<div class="md:hidden">
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white bg-cover bg-center hero-bg animated-gradient">
+<div class="px-4">
+<h2 class="text-5xl md:text-7xl font-extrabold tracking-tighter drop-shadow-xl">Your Personal Shopping Assistant</h2>
+<p class="mt-6 max-w-3xl mx-auto text-xl md:text-2xl text-white/95">Let us handle the shopping for you. From finding the perfect item to delivery, we've got you covered.</p>
+<a class="mt-10 inline-block bg-accent text-text-light px-10 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-transform transform hover:scale-110 shadow-lg" href="#quote">Get Started!</a>
+</div>
+</section>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 space-y-20 sm:space-y-28">
+<section class="scroll-mt-20" id="about">
+<div class="max-w-4xl mx-auto text-center">
+<h3 class="text-4xl font-bold tracking-tight section-title text-text-light dark:text-text-dark">About Us</h3>
+<p class="mt-8 text-lg text-subtext-light dark:text-subtext-dark">
+              We are your go-to shopping and errand assistants, we are specialized in outsourcing high 
+              quality items that is tailored to your needs. We meticulously select products ranging from 
+              foodstuffs to fairly used household items or equipment to meet your specification. 
+              we handle every aspect of the purchase, including reliable delivery which involves both local 
+              and international delivery. With Amarah, you can enjoy the convenience of effortless shopping, 
+              saving you time and ensuring satisfaction with every purchase.
+            </p>
+</div>
+</section>
+<section class="scroll-mt-20" id="testimonials">
+<div class="max-w-4xl mx-auto text-center">
+<h3 class="text-4xl font-bold tracking-tight section-title text-text-light dark:text-text-dark">What Our Customers Say</h3>
+<p class="mt-8 text-lg text-subtext-light dark:text-subtext-dark">We take pride in providing an exceptional service. Here's what our clients have to say about us.</p>
+</div>
+<div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="bg-content-light dark:bg-content-dark p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-secondary">
+<div class="flex flex-col h-full">
+<p class="text-base text-subtext-light dark:text-subtext-dark flex-grow italic">"Amarah helped me buy foodstuffs from the Nigeria local market and shipped it abroad to me. The process was so easy and their communication was excellent. Highly recommended!"</p>
+<div class="mt-6 pt-6 border-t border-border-light dark:border-border-dark">
+<p class="text-sm font-bold text-primary">Esther E.</p>
+<p class="text-xs text-subtext-light dark:text-subtext-dark">United Kingdom</p>
+</div>
+</div>
+</div>
+<div class="bg-content-light dark:bg-content-dark p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-secondary">
+<div class="flex flex-col h-full">
+<p class="text-base text-subtext-light dark:text-subtext-dark flex-grow italic">"I needed a fairly used blender because the cost of getting a new one was overwhelming. Amarah plug did not only located it but also had it delivered to me successfuly. Amazing service!"</p>
+<div class="mt-6 pt-6 border-t border-border-light dark:border-border-dark">
+<p class="text-sm font-bold text-primary">Ebuka U.</p>
+<p class="text-xs text-subtext-light dark:text-subtext-dark">Benin, Nigeria</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-20" id="contact">
+<div class="max-w-4xl mx-auto text-center">
+<h3 class="text-4xl font-bold tracking-tight section-title text-text-light dark:text-text-dark">Contact Us</h3>
+<p class="mt-8 text-lg text-subtext-light dark:text-subtext-dark">For inquiries or assistance, please reach out to us. We're here to help you with all your shopping needs.</p>
+</div>
+<div class="mt-16 max-w-lg mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 p-8 rounded-xl shadow-lg">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<p class="w-20 text-sm font-medium text-primary">Email</p>
+<p class="text-base font-medium text-text-light dark:text-text-dark">amarahindiaspora@gmail.com</p>
+</div>
+<div class="border-t border-border-light dark:border-border-dark"></div>
+<div class="flex items-center gap-4">
+<p class="w-20 text-sm font-medium text-primary">Phone</p>
+<p class="text-base font-medium text-text-light dark:text-text-dark">+2348105590651</p>
+</div>
+<div class="border-t border-border-light dark:border-border-dark"></div>
+<div class="flex items-center gap-4">
+<p class="w-20 text-sm font-medium text-primary">whatsapp</p>
+<p class="text-base font-medium text-text-light dark:text-text-dark text-sky-400"><a href="https://wa.me/message/EJ65GMLPCSMPI1">message us on whatsapp</a></p>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-20" id="quote">
+<div class="max-w-4xl mx-auto text-center">
+<h3 class="text-4xl font-bold tracking-tight section-title text-text-light dark:text-text-dark">Book a Quotation</h3>
+<p class="mt-8 text-lg text-subtext-light dark:text-subtext-dark">Tell us what you're looking for, and we'll get back to you with a price.</p>
+</div>
+<div class="mt-16 max-w-lg mx-auto">
+<form class="space-y-8 p-8 bg-content-light dark:bg-content-dark rounded-xl shadow-2xl">
+<div>
+<label class="block text-base font-medium mb-2 text-primary" for="item-description">Item Description</label>
+<textarea class="form-input w-full bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary transition duration-300" id="item-description" name="item-description" placeholder="Describe the item you are looking for, including any specific details such as size, color, quantity etc." rows="4"></textarea>
+</div>
+<div>
+<label class="block text-base font-medium mb-2 text-primary" for="email">Your Email</label>
+<input class="form-input w-full bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary transition duration-300" id="email" name="email" placeholder="you@example.com" type="email"/>
+</div>
+<div>
+<button class="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-lg font-bold hover:shadow-vibrant transition-all transform hover:scale-105" type="submit">Submit Request</button>
+</div>
+</form>
+</div>
+</section>
+</div>
+</main>
+<footer class="bg-content-dark dark:bg-gray-900 border-t border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-subtext-dark dark:text-subtext-dark">
+<p>© 2025 amarah. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>
