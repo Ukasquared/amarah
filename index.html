@@ -43,6 +43,37 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      min-width: 250px;
+      font-family: sans-serif;
+    }
+
+    .notification.fade-out {
+      opacity: 0;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
@@ -147,20 +178,20 @@
 <form id="booking-form" class="space-y-8 p-8 bg-content-light dark:bg-content-dark rounded-xl shadow-2xl">
 <div>
 <label class="block text-base font-medium mb-2 text-primary" for="category">Select category</label>
-<input class="bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark focus:ring-primary focus:border-primary transition duration-300" type="checkbox" id="fodstuff1" name="foodstuff1" value="Foodstuffs">&nbsp;&nbsp;
+<input class="bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark focus:ring-primary focus:border-primary transition duration-300" type="checkbox" id="foodstuff1" name="foodstuff" value="Foodstuffs">&nbsp;&nbsp;
 <label for="foodstuff1"> foodstuffs</label><br>
-<input class="bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark focus:ring-primary focus:border-primary transition duration-300" type="checkbox" id="household1" name="household1" value="Household-Item">&nbsp;&nbsp;
+<input class="bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark focus:ring-primary focus:border-primary transition duration-300" type="checkbox" id="household1" name="household" value="Household-Item">&nbsp;&nbsp;
 <label for="household1">fairly used Household Equipments</label><br>
-<input class="bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark focus:ring-primary focus:border-primary transition duration-300" type="checkbox" id="others1" name="others1" value="others">&nbsp;&nbsp;
+<input class="bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark focus:ring-primary focus:border-primary transition duration-300" type="checkbox" id="others1" name="others" value="others">&nbsp;&nbsp;
 <label for="others1"> others</label><br>
 
 </div>
 <div>
-<label class="block text-base font-medium mb-2 text-primary" for="item-description">Item Description</label>
-<textarea class="form-input w-full bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary transition duration-300" id="item-description" name="item-description" placeholder="Describe the item you are looking for, including any specific details such as size, color, quantity etc." rows="4"></textarea>
+<label class="block text-base font-medium mb-2 text-primary" aria-required="true" for="item-description">Item Description</label>
+<textarea class="form-input w-full bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary transition duration-300" id="item-description" name="item_description" placeholder="Describe the item you are looking for, including any specific details such as size, color, quantity etc." rows="4"></textarea>
 </div>
 <div>
-<label class="block text-base font-medium mb-2 text-primary" for="email">Your Email</label>
+<label class="block text-base font-medium mb-2 text-primary" aria-required="true" for="email">Your Email</label>
 <input class="form-input w-full bg-background-light dark:bg-background-dark border-2 border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary transition duration-300" id="email" name="email" placeholder="you@example.com" type="email"/>
 </div>
 <div>
