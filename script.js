@@ -41,9 +41,9 @@ form.addEventListener('submit', async(e) => {
     e.preventDefault();
     let category = []
     // gets all the form data input by user -- formdata structure - [[key, value], [key, value]
-    const formData = new FormData(form);
+    let formData = new FormData(form);
     for (const [key, value] of formData.entries()) {
-        const keySet = ['item_description','email'] 
+        const keySet = ['item_description', 'email'] 
         if (!keySet.includes(key)) {
             category.push(value);
             formData.delete(key)
@@ -53,6 +53,7 @@ form.addEventListener('submit', async(e) => {
     formData.append('category', category)
 
     // convert to Json
+    console.log(formData);
     const formObj = Object.fromEntries(formData.entries());
     console.log(formObj);
     
