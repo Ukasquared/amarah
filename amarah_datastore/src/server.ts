@@ -1,9 +1,9 @@
 
-import { databaseConfig } from './src/config';
-import { express_app } from './src/config/express';
+import { databaseConfig } from './config';
+import { express_app } from './config/express';
 import express, { Application, Request, Response } from 'express';
-import { runMongoConnection } from './src/config/database';
-import { User } from './src/repository';
+import { runMongoConnection } from './config/database';
+import { User } from './repository';
 
 
 
