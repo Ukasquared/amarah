@@ -57,7 +57,7 @@ form.addEventListener('submit', async(e) => {
     console.log(formObj);
     
     try {
-        const response = fetch('https://amarah.onrender.com//book-a-quotation', {
+        const response = fetch('https://amarah.onrender.com/book-a-quotation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
