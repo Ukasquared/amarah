@@ -7,7 +7,7 @@ export const express_app = async (app: Application) => {
     // Use the cors middleware
 // Configure to allow requests from your origin
     app.use(cors({
-    origin: 'https://amarah.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
     }));
