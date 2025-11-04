@@ -44,18 +44,20 @@ form.addEventListener('submit', async(e) => {
     const formData = new FormData(form);
     for (const [key, value] of formData.entries()) {
         const keySet = ['item_description','email'] 
-        if (formData.get(key) && !keySet.includes(key)) {
+        if (!keySet.includes(key)) {
             category.push(value);
             formData.delete(key)
         }
     }
+    console.log(category)
     formData.append('category', category)
 
     // convert to Json
-    const formObj = Object.fromEntries(formData.entries())
+    const formObj = Object.fromEntries(formData.entries());
+    console.log(formObj);
     
     try {
-        const response = fetch('/book-a-quotation', {
+        const response = fetch('https://amarah.onrender.com//book-a-quotation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
